@@ -1,0 +1,386 @@
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style de l'icône de ciseaux pour les boutons radios */
+.radio-label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px; /* Ajuster la taille de l'icône selon les besoins */
+    color: var(--primary-color); /* Couleur par défaut */
+    transition: color 0.3s ease;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+
+input[type="checkbox"]:checked + .radio-label {
+    color: var(--active); 
+}
+
+.radio-label:hover {
+    color: var(--active);
+}
+
+
+/* Couleurs pour hover et active */
+:root {
+    --primary-color: #365486;
+    --secondary-color: #7FC7D9;
+    --accent-color: #0F1035;
+    --background-color: #DCF2F1;
+    --background-color-two: #EDE3DB;
+    --text-color: #191919;
+    --active: rgb(255, 0, 174);
+    
+  --item: #2d4ebb;
+}
+
+/* CSS général (inchangé) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('images/img-presta.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.routine .container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 0 8px var(--accent-color);  
+    max-width: 700px;
+    border: 8px solid var(--background-color-two);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+
+
+.routine #step-indicator {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.routine form {
+    display: flex;
+    flex-direction: column;
+}
+
+.routine .form-step {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.routine .form-step.active {
+    display: flex;
+}
+
+.routine label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.routine button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: flex-end;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.routine button:hover {
+    background-color: var(--secondary-color);
+}
+
+.routine button:active {
+    background-color: var(--primary-color);
+}
+
+.routine button.prev-step {
+    background-color: var(--primary-color);
+    color: white;
+    margin-right: 10px;
+}
+
+.routine button.prev-step:hover {
+    background-color: var(--secondary-color);
+}
+
+.routine button.prev-step:active {
+    background-color: var(--accent-color);
+}
+
+.routine .hidden {
+    display: none;
+}
+
+.routine #result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--background-color-two);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: var(--primary-color);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .routine .container {
+        padding: 15px;
+    }
+
+    .routine h1 {
+        font-size: 24px;
+    }
+
+    .routine #step-indicator {
+        font-size: 18px;
+    }
+
+    .routine label {
+        font-size: 16px;
+    }
+
+    .routine button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .routine .container {
+        padding: 10px;
+    }
+
+    .routine h1 {
+        font-size: 20px;
+    }
+
+    .routine #step-indicator {
+        font-size: 16px;
+    }
+
+    .routine label {
+        font-size: 14px;
+    }
+
+    .routine button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+/*-----------------------------------------------------------------*/
+
+/*HEADER*/
+
+.logo1 {
+    display: flex;
+    justify-content: center;
+}
+
+.logo2 {
+    display: flex;
+    justify-content: center;
+}
+
+.logo1 img {
+    max-width: 320px;
+    margin-top: 5px;
+}
+
+.logo2 img {
+    max-width: 230px;
+}
+
+.navbar ul {
+    margin-top: 15px;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 15px;
+  }
+  
+  .item a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .item a:hover {
+    color: #346be0;
+  }
+  
+  
+  .item-principal{
+    color: var(--item);
+  }  
+  
+
+/* Footer principal */
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 35px;
+}
+
+.container-footer {
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-info li {
+    margin-bottom: 10px;
+}
+
+.footer-info li a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-info li a:hover {
+    text-decoration: underline;
+}
+
+/* Texte des droits d'auteur */
+.txtdroits {
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+/* Icônes pour les liens */
+.footer-info li a i {
+    margin-left: 5px;
+}
+
+.routine .form-image {
+    text-align: center;
+}
+
+.routine .form-image img {
+    max-width: 100px;
+}
+
+
+@font-face {
+    font-family:'Playwrite+IS';
+    src: url('Fonts/PlaywriteIS-Regular.woff2') format('woff2'),
+        url('Fonts/PlaywriteIS-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.playwrite-ro{
+    font-family: "Playwrite RO", cursive;
+    font-optical-sizing: auto;
+  }
+
+
+.routine h1 {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: "Playwrite RO";
+    margin-top: 0;
+}
+
+
+/* Styles du menu burger */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+  
+  }
+  
+  /* Styles responsive */
+  @media (max-width: 600px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--accent-color);
+        position: absolute;
+        top: 60px; /* Ajustez en fonction de la hauteur de la barre de navigation */
+        z-index: 1000; /* Positionne la liste au-dessus des autres éléments */
+  
+    }
+  
+    .navbar ul.active {
+        display: flex;
+        margin-top: 60px;
+    }
+  
+    .navbar ul li {
+        margin: 0;
+    }
+  
+    .navbar ul li a {
+        padding: 1rem;
+        display: block;
+        color: white;
+  
+    }
+  
+    .menu-toggle {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px;
+    }
+  }

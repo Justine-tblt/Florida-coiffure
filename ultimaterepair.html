@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Détail des produits - Florida Coiffure</title>
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+    <header>
+        <div class="logo1"><img src="images/logo.png" alt="Logo"></div>
+        <div class="navbar">
+            <div class="menu-toggle" id="menuToggle">
+                &#9776; <!-- Unicode pour le symbole hamburger -->
+            </div>
+            <ul class="nav-list" id="navList">
+                <li class="item"><a href="index.html">Accueil</a></li>
+                <li class="item"><a href="prestations-home.php">Coiffure</a></li>
+                <li class="item"><a href="ongles.html">Onglerie</a></li>
+                <li class="item"><a href="products.html">Boutique</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    
+    <div class="top"> 
+        <div class="back">
+            <a href="products.html" class="retour"><i class="fa-solid fa-chevron-left"></i> Page précédente</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="images">
+            <div class="image-container">
+                <img src="images/products/Ultimate-Repair-Shampoo.jpg" alt="">
+                <div class="overlay">Shampoing</div>
+            </div>
+            <div class="image-container">
+                <img src="images/products/Ultimate-Repair-apresshampo.jpg" alt="">
+                <div class="overlay">Après-Shampoing</div>
+            </div>
+            <div class="image-container">
+                <img src="images/products/Ultimate-Repair-soin-sansrinc.jpg" alt="">
+                <div class="overlay">Sérum protecteur</div>
+            </div>
+            <div class="image-container">
+                <img src="images/products/Ultimate-Repair-Miracle-Hair.jpg" alt="">
+                <div class="overlay">Spray protection</div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Routine cheveux abîmés</h1>
+            <div class="icons">
+                <div class="caracteristique"><img src="images/icon-repare.png" alt="" class="icon">Répare</div>
+                <div class="caracteristique"><img src="images/icon-force.png" alt="" class="icon">Renforce</div>
+            </div>
+            <div class="buttons">
+                <button onclick="showProduct('Pack-ultimaterepair')">Pack</button>
+                <button onclick="showProduct('Shampoing-ultimaterepair')">Shampoing</button>
+                <button onclick="showProduct('Après-shampoing-ultimaterepair')">Après-shampoing</button>
+                <button onclick="showProduct('Serum protecteur-ultimaterepair')">Sérum protecteur</button>
+                <button onclick="showProduct('Traitement reparateur-ultimaterepair')">Traitement réparateur</button>
+            </div>
+            <div class="description">
+                <p>Description du produit sélectionné, avec sous titres et paragraphes.</p>
+            </div>
+           
+            <button id="price" class="price">Acheter </button>
+        </div>
+    </div>
+
+    
+    <!-- FOOTER--->
+    <footer id="footer">
+        <div class="container-footer">
+            <div class="column">
+                <h4>Nous contacter</h4>
+                <ul class="footer-info">
+                    <li class="info"><a href="https://maps.app.goo.gl/gYwtXxxcoUaWmJxg8">29 Rue Vincent, 30240 Le Grau-du-Roi <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li class="info"><a href="tel:0466510012">04.66.51.00.12 <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>Liens utiles</h4>
+                <ul class="footer-info">
+                    <li class="info"><a href="https://www.planity.com/florida-coiffure-30240-le-grau-du-roi">Prendre rendez-vous <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li class="info"><a href="mentionslegales.php">Mentions légales  <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <p class="txtdroits">&copy; 2024 Florida Coiffure. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="products.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+</html>

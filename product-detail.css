@@ -1,0 +1,395 @@
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family:'Playwrite+IS';
+    src: url('Fonts/PlaywriteIS-Regular.woff2') format('woff2'),
+        url('Fonts/PlaywriteIS-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+  :root {
+    --primary-color: #365486;   
+    --secondary-color: #7FC7D9; 
+    --accent-color: #0F1035;   
+
+    --background-color: #DCF2F1; 
+    --background-color-two:#EDE3DB; 
+    --text-color: #191919;   
+    
+  --item: #2d4ebb;
+}
+
+
+/*HEADER*/
+
+.logo1 {
+    display: flex;
+    justify-content: center;
+}
+
+.logo1 img{
+    max-width: 320px;
+    margin-top: 5px;
+}
+
+
+.navbar ul {
+    margin-top: 15px;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 15px;
+  }
+  
+  .item a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .item a:hover {
+    color: #346be0;
+  }
+  
+  
+  .item-principal{
+    color: var(--item);
+  }  
+    
+
+
+.playwrite-ro{
+    font-family: "Playwrite RO", cursive;
+    font-optical-sizing: auto;
+  }
+
+
+h1{
+    font-family: "Playwrite RO";
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border: dotted;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.5s ease;
+}
+
+.image-container:hover img {
+    filter: brightness(0.9);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.product-info {
+    width: 1000px;
+}
+
+
+
+.caracteristique{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 40px;
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 44px;
+    background-image: url('images/img-presta.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.buttons button:hover {
+    background-image: url('images/img-presta.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.description {
+    margin: 10px 0;
+}
+
+
+.buttons button.selected {
+    color: rgb(0, 0, 0);
+    border: 2px solid var(--accent-color);
+}
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 0;
+    }
+
+    .image-container {
+        height: 200px;
+    }
+
+    h1{
+        font-size: 2.8rem;
+    }
+
+    .container{
+        padding: 0;
+    }
+}
+
+
+.price {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-transform: uppercase;
+    height: 44px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price:hover{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+
+
+
+/* Footer principal */
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 35px;
+}
+
+.container-footer {
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-info li {
+    margin-bottom: 10px;
+}
+
+.footer-info li a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-info li a:hover {
+    text-decoration: underline;
+}
+
+/* Texte des droits d'auteur */
+.txtdroits {
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+
+/*LIENS RETOUR ET PARTAGE*/
+
+.top{
+    display: flex;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.retour {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.back {
+    margin-top: 50px;
+}
+
+
+/* Styles du menu burger */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+  
+  }
+
+
+  /* Styles responsive */
+  @media (max-width: 600px) {
+
+    .icons{
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--accent-color);
+        position: absolute;
+        top: 60px; /* Ajustez en fonction de la hauteur de la barre de navigation */
+        z-index: 1000; /* Positionne la liste au-dessus des autres éléments */
+  
+    }
+  
+    .navbar ul.active {
+        display: flex;
+        margin-top: 60px;
+    }
+  
+    .navbar ul li {
+        margin: 0;
+    }
+  
+    .navbar ul li a {
+        padding: 1rem;
+        display: block;
+        color: white;
+  
+    }
+  
+    .menu-toggle {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px;
+    }
+  }
+
+p{
+    max-width: 95%; 
+}
